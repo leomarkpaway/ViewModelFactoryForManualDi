@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val repository = Repository()
-        val factory = MainViewModelFactory(repository)
+        val factory = ViewModelFactory(repository)
         viewModel = ViewModelProvider(viewModelStore, factory)[MainViewModel::class.java]
 
     }
